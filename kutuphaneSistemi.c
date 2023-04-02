@@ -28,17 +28,17 @@ NODE *create_node(char isbn[], char name[], char author[], int year, char status
 }
 
 void insert_book(){
-    char isbn[20], name[20], author[20], status[20];
+    char isbn[20], name[50], author[50], status[20];
     int year;
 
     printf("Eklemek istediginiz kitabin ISBN numarasini giriniz: ");
-    scanf("%s", isbn);
-    printf("Eklemek istediginiz kitabin ismini giriniz: ");
-    scanf("%s", name);
-    printf("Eklemek istediginiz kitabin yazrinin ismini giriniz: ");
-    scanf("%s", author);
+    scanf("%s", &isbn);
     printf("Eklemek istediginiz kitabin basim yilini giriniz: ");
     scanf("%d", &year);
+    printf("Eklemek istediginiz kitabin ismini giriniz: ");
+    scanf(" %[^\n]s", name); // scanf kullanarak kitap ismini alınır
+    printf("Eklemek istediginiz kitabin yazrinin ismini giriniz: ");
+    scanf(" %[^\n]s", author);
 
     if(year < 1985){
         strcpy(status, "Referans");
@@ -60,6 +60,8 @@ void insert_book(){
 
     printf("\nKitap sisteme basariyla eklenmistir.\n");
 }
+
+
 
 void display_books(){
     if(start == NULL){
