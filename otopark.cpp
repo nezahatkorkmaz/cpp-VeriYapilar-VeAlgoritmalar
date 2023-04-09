@@ -1,5 +1,5 @@
 #include <iostream>
-#include <fstream>
+// #include <fstream> Eğer dosyaya yazdır/oku yapsaydık, dosya işlemleri yapan kütüphanemiz
 using namespace std;
 struct node {
 	string plaka;
