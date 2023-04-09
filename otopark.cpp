@@ -12,6 +12,7 @@ struct node * head = NULL;
 
 void ekle(string plaka, string aracTipi, int ucret){
 	system("cls");
+	system("cls");
 	struct node * arac = new node();
 	arac->plaka=plaka;
 	arac->aracTipi=aracTipi;
@@ -33,7 +34,7 @@ void ekle(string plaka, string aracTipi, int ucret){
 }
 
 void cikart(string plaka) {
-system("cls");
+	system("cls");
 	if (head == NULL) {
 	cout << "Otoparkta cikartilacak arac bulunmamaktadir." << endl;
 	return;
@@ -60,6 +61,7 @@ cout << "Arac otoparkta bulunamadi." << endl;
 }
 
 void listele() {
+	system("cls");
 	if (head == NULL) {
 	cout << "Otoparkta arac yoktur." << endl;
 	return;
